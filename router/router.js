@@ -11,6 +11,7 @@ const getListofUsers = async () => {
 }
 
 router.get('/', async (request, response) => {
+  console.log(await getListofUsers())
   return response.render('index', {
     title: 'Home',
     users: await getListofUsers()
